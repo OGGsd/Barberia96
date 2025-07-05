@@ -3,18 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     
-    <!-- Enhanced Favicon Implementation -->
+    <!-- Enhanced Favicon Implementation - Apple PWA Compliant -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/logo.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/logo.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/logo.png" />
-    <link rel="icon" type="image/png" sizes="144x144" href="/logo.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/logo.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon/android-icon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="72x72" href="/favicon/android-icon-72x72.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="144x144" href="/favicon/android-icon-144x144.png" />
+    <link rel="icon" type="image/png" sizes="152x152" href="/favicon/apple-icon-152x152.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/1024x1024.png" />
+    <link rel="icon" type="image/png" sizes="1024x1024" href="/favicon/1024x1024.png" />
     
     <!-- Standard favicon fallback -->
-    <link rel="shortcut icon" href="/logo.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     
     <!-- Enhanced viewport for iOS iframe compatibility -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
@@ -63,16 +66,17 @@
     ">
     
     <!-- Apple Touch Icons - All pointing to logo.png -->
-    <link rel="apple-touch-icon" href="/logo.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/logo.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="/logo.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/logo.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/logo.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/logo.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="/logo.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/logo.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/logo.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/logo.png" />
+    <!-- Apple Touch Icons - Comprehensive favicon implementation -->
+    <!-- Apple Touch Icons - Using existing favicon files for Apple PWA compliance -->
+    <link rel="apple-touch-icon" href="/favicon/android-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/android-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="/favicon/android-icon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/favicon/android-icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/favicon/1024x1024.png" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/favicon/1024x1024.png" />
     
     <!-- Manifest -->
     <link rel="manifest" href="/manifest.json" />
@@ -144,6 +148,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
     <!-- Preload critical resources -->
+    <link rel="preload" href="/favicon/favicon-32x32.png" as="image" type="image/png" />
     <link rel="preload" href="/logo.png" as="image" type="image/png" />
     <link rel="preload" href="/manifest.json" as="fetch" crossorigin />
     

@@ -63,157 +63,99 @@
   ],
   "icons": [
     {
-      "src": "/logo.png",
-      "sizes": "16x16",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/logo.png",
-      "sizes": "32x32",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/logo.png",
+      "src": "/favicon/android-icon-48x48.png", 
       "sizes": "48x48",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/android-icon-72x72.png", 
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/favicon-96x96.png", 
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/logo.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/logo.png",
+      "src": "/favicon/android-icon-144x144.png", 
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/apple-icon-152x152.png", 
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/android-icon-192x192.png", 
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/logo.png",
-      "sizes": "256x256",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/logo.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/logo.png", 
+      "src": "/favicon/1024x1024.png", 
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/1024x1024.png", 
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any"
     },
+    
+    // Maskable purpose icons - Full coverage for adaptive icons
     {
-      "src": "/logo.png",
-      "sizes": "16x16",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/logo.png",
-      "sizes": "32x32",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/logo.png",
+      "src": "/favicon/android-icon-48x48.png", 
       "sizes": "48x48",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/android-icon-72x72.png", 
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/favicon-96x96.png", 
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/logo.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/logo.png",
+      "src": "/favicon/android-icon-144x144.png", 
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/apple-icon-152x152.png", 
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/android-icon-192x192.png", 
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/logo.png",
-      "sizes": "256x256",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/logo.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/logo.png", 
+      "src": "/favicon/1024x1024.png", 
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/logo.png",
+      "src": "/favicon/1024x1024.png", 
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "maskable"
@@ -227,7 +169,7 @@
       "url": "/?action=book",
       "icons": [
         {
-          "src": "/logo.png",
+          "src": "/favicon/favicon-96x96.png",
           "sizes": "96x96",
           "type": "image/png",
           "purpose": "any"
@@ -241,7 +183,7 @@
       "url": "/om-oss",
       "icons": [
         {
-          "src": "/logo.png",
+          "src": "/favicon/favicon-96x96.png",
           "sizes": "96x96",
           "type": "image/png",
           "purpose": "any"
@@ -255,7 +197,7 @@
       "url": "/?action=contact",
       "icons": [
         {
-          "src": "/logo.png",
+          "src": "/favicon/favicon-96x96.png",
           "sizes": "96x96",
           "type": "image/png",
           "purpose": "any"
@@ -269,7 +211,7 @@
       "url": "/?action=prices",
       "icons": [
         {
-          "src": "/logo.png",
+          "src": "/favicon/favicon-96x96.png",
           "sizes": "96x96",
           "type": "image/png",
           "purpose": "any"

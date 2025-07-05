@@ -250,13 +250,44 @@ const BookingIframe: React.FC<BookingIframeProps> = ({ bookingUrl, serviceName, 
         initial="hidden"
         animate="visible"
         exit="exit"
-        style={{ zIndex: 999999 }}
+        style={{ 
+          zIndex: 2147483647,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          width: '100vw',
+          height: '100vh',
+          // Apple/iOS specific positioning
+          WebkitTransform: 'translate3d(0, 0, 0)',
+          transform: 'translate3d(0, 0, 0)',
+          WebkitBackfaceVisibility: 'hidden',
+          backfaceVisibility: 'hidden',
+          willChange: 'transform, opacity',
+          // Force above all Apple system UI
+          WebkitAppearance: 'none',
+          appearance: 'none',
+          // Ensure modal captures all touch events on Apple devices
+          touchAction: 'none',
+          WebkitTouchCallout: 'none',
+          pointerEvents: 'auto'
+        }}
       >
         {/* Minimized Header with enhanced animation */}
         <motion.div 
           className="iframe-modal-header bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white px-4 py-2 flex items-center justify-between shadow-lg relative h-12 flex-shrink-0"
           variants={headerVariants}
-          style={{ zIndex: 1000000 }}
+          style={{ 
+            zIndex: 2147483646,
+            // Apple/iOS specific header positioning
+            WebkitTransform: 'translate3d(0, 0, 0)',
+            transform: 'translate3d(0, 0, 0)',
+            willChange: 'transform',
+            isolation: 'isolate',
+            position: 'relative',
+            pointerEvents: 'auto'
+          }}
         >
           <div className="flex items-center min-w-0 flex-1">
             <motion.img 
@@ -329,7 +360,19 @@ const BookingIframe: React.FC<BookingIframeProps> = ({ bookingUrl, serviceName, 
             height: 'calc(100vh - 48px)',
             maxHeight: 'calc(100vh - 48px)',
             minHeight: 'calc(100vh - 48px)',
-            zIndex: 999998
+            zIndex: 2147483645,
+            // Apple/iOS specific container positioning
+            WebkitTransform: 'translate3d(0, 0, 0)',
+            transform: 'translate3d(0, 0, 0)',
+            WebkitBackfaceVisibility: 'hidden',
+            backfaceVisibility: 'hidden',
+            willChange: 'transform',
+            isolation: 'isolate',
+            // Prevent Apple Safari scrolling issues
+            WebkitOverflowScrolling: 'touch',
+            overflow: 'hidden',
+            position: 'relative',
+            pointerEvents: 'auto'
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -497,10 +540,29 @@ const BookingIframe: React.FC<BookingIframeProps> = ({ bookingUrl, serviceName, 
                 height: '100%',
                 minHeight: '100%',
                 maxHeight: '100%',
-                zIndex: 999997,
+                zIndex: 2147483644,
                 // iOS Safari optimizations
                 WebkitOverflowScrolling: 'touch',
-                overflow: 'auto'
+                overflow: 'auto',
+                // Apple/iOS specific iframe positioning
+                WebkitTransform: 'translate3d(0, 0, 0)',
+                transform: 'translate3d(0, 0, 0)',
+                WebkitBackfaceVisibility: 'hidden',
+                backfaceVisibility: 'hidden',
+                willChange: 'transform, contents',
+                // Force iframe above Apple system UI
+                WebkitPerspective: '1000px',
+                perspective: '1000px',
+                // Prevent Apple Safari touch interference
+                WebkitTouchCallout: 'none',
+                WebkitUserSelect: 'none',
+                touchAction: 'manipulation',
+                // Force iframe to capture touch events
+                pointerEvents: 'auto',
+                // Ensure iframe renders properly on Apple devices
+                WebkitAppearance: 'none',
+                appearance: 'none',
+                position: 'relative'
               }}
               // Enhanced security sandbox for iOS compatibility
               sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"

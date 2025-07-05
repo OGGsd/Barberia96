@@ -14,24 +14,64 @@
   bottom: 0 !important;
   isolation: isolate;
   pointer-events: auto !important;
+  /* Apple/iOS specific fixes for iframe overlay */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  /* Force hardware acceleration on Apple devices */
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  /* Ensure modal appears above all Apple system UI */
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .iframe-modal-header {
   z-index: 2147483646 !important; /* Second highest possible */
   position: relative !important;
   pointer-events: auto !important;
+  /* Apple/iOS specific header fixes */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  /* Ensure header stays above iframe on Apple devices */
+  isolation: isolate;
 }
 
 .iframe-container {
   z-index: 2147483645 !important; /* Third highest */
   position: relative !important;
   pointer-events: auto !important;
+  /* Apple/iOS specific container fixes */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  /* Force new stacking context on Apple devices */
+  isolation: isolate;
+  /* Prevent Apple Safari from interfering */
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden; /* Container manages overflow, iframe scrolls */
 }
 
 .iframe-container iframe {
   z-index: 2147483644 !important; /* Fourth highest */
   position: relative !important;
   pointer-events: auto !important;
+  /* Apple/iOS specific iframe fixes */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  /* Ensure iframe content renders properly on Apple devices */
+  -webkit-overflow-scrolling: touch !important;
+  overflow: auto !important;
+  /* Force hardware acceleration */
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  /* Prevent Apple Safari touch interference */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 /* 2. NAVIGATION - SECOND PRIORITY (Level 100000+) */
@@ -81,6 +121,15 @@ body.iframe-modal-open {
   touch-action: none;
   /* Prevent any scrolling */
   overscroll-behavior: none;
+  /* Apple/iOS specific body fixes when modal is open */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  /* Prevent Apple Safari from showing address bar */
+  -webkit-appearance: none;
+  appearance: none;
+  /* Force full viewport usage on Apple devices */
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Mobile-first iframe optimizations - Ensure iframe reaches bottom */
@@ -142,6 +191,30 @@ body.iframe-modal-open {
 /* iOS Safari specific iframe optimizations */
 @supports (-webkit-touch-callout: none) {
   /* iOS Safari */
+  .iframe-modal {
+    /* Enhanced iOS Safari modal positioning */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    /* Force above all iOS Safari UI */
+    z-index: 2147483647 !important;
+    /* Hardware acceleration for iOS */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    /* Prevent iOS Safari interference */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* Force new layer on iOS */
+    will-change: transform, opacity;
+    /* Ensure modal captures all touch events */
+    touch-action: none;
+    -webkit-touch-callout: none;
+  }
+  
   .iframe-container {
     /* Fix iOS Safari iframe height issues */
     height: 100% !important;
@@ -153,6 +226,17 @@ body.iframe-modal-open {
     position: relative;
     display: flex;
     flex-direction: column;
+    /* Enhanced iOS Safari container fixes */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    /* Force hardware acceleration */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* Ensure container stays in place */
+    will-change: transform;
+    /* Prevent iOS Safari scrolling issues */
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
   }
   
   .iframe-container iframe {
@@ -169,6 +253,20 @@ body.iframe-modal-open {
     /* Ensure iframe reaches exact bottom */
     position: relative;
     display: block;
+    /* Enhanced iOS Safari iframe fixes */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    /* Force hardware acceleration */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* Ensure iframe renders above iOS Safari UI */
+    will-change: transform, contents;
+    /* Prevent iOS Safari from interfering with iframe */
+    -webkit-appearance: none;
+    appearance: none;
+    /* Force iframe to capture touch events */
+    pointer-events: auto;
+    touch-action: manipulation;
   }
 }
 
